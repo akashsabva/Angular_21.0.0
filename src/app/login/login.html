@@ -12,3 +12,19 @@
 <div [style.background-color]="bgColor">STYLE BINDING</div>
 
 <p [innerText]="'Count is: '+ count()"></p>
+
+<button (click)="increment()">+</button>
+<div>Count2 is : {{ count2 }}</div>
+
+<button (click)="showEvent($event)">Show Event</button>
+
+<input (input)="updateUsername($event.target.value)" />
+<p>User: {{ user }}</p>
+
+<button (click)="incrementSignalCount()">+</button>
+<div>Signal Count is : {{ signalCount() }}</div>
+
+<form (submit)="handleSubmit($event)">
+    <input placeholder="Email">
+    <button>Submit</button>
+</form>
