@@ -9,4 +9,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('angular-tutorial');
+  name = "Sky";
+  getUser() {
+    return "Return from Function";
+  }
+  summary = signal("This is Summary Signal");
 }
