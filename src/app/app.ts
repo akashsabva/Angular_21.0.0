@@ -2,14 +2,21 @@ import { Component, effect, model, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Counter } from './counter/counter';
+import { ShortNamePipe } from './pipe/short-name-pipe';
+import { ConvertCurrencyPipe } from './pipe/convert-currency-pipe';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Counter],
+  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
+
+  fullName: string = "John Doe";
+  totalAmount: number = 20;
+  usdToInrRate: number = 90;
 
   isDarkMode = signal<boolean>(false);
 

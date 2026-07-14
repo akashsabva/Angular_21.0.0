@@ -1,3 +1,7 @@
+<h1>Custom Pipe</h1>
+<p>{{ fullName | shortName }}</p>
+<p>Amount: {{ totalAmount | currency }} &  Convert amount: {{ totalAmount | convertCurrency:usdToInrRate | currency:'INR' }}</p>
+
 <h1>Effect Example(Light or Dark Mode)</h1>
 <button (click)="handleMode()">Light/Dark Mode</button>
 
