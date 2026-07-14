@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, model, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Counter } from './counter/counter';
@@ -10,6 +10,25 @@ import { Counter } from './counter/counter';
   styleUrl: './app.css'
 })
 export class App {
+
+  isDarkMode = signal<boolean>(false);
+
+  constructor() {
+    effect(() => {
+      if(this.isDarkMode()) {
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'white';
+      } else {
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
+      }
+    })
+  }
+
+  handleMode() {
+    this.isDarkMode.update(mode => !mode);
+  }
+
   protected readonly title = signal('angular-tutorial');
   name = "Sky";
   getUser() {
