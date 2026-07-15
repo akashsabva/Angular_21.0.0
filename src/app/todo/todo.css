@@ -1,0 +1,39 @@
+.mainTitle {
+    text-align: center;
+    color: #4141b5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.todoInput {
+    padding: 5px 15px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.todoBtn {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.d-flex {
+    display: flex !important;
+}
+.justify-between {
+    justify-content: space-between !important;
+}
+.align-center {
+    align-items: center !important;
+}
+.todoItem {
+    background-color: #80808045;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 9px;
+}
+.itemBtn {
+    background-color: red;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.itemTask {
+    cursor: pointer;
+}

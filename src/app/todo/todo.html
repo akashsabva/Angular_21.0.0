@@ -1,0 +1,14 @@
+<h1 class="mainTitle">Todo App</h1>
+
+<input [value]="task()" (input)="task.set($event.target.value)" class="todoInput" type="text" name="task" id="task" placeholder="Write something...">
+<button class="todoBtn" type="submit" (click)="addTodo()">Add</button>
+
+<hr>
+
+@for (item of items(); track $index) {
+    <div class="d-flex justify-between align-center todoItem">
+        <div>{{ $index + 1 }}.</div>
+        <div class="itemTask" [style.text-decoration]="item.isDone ? 'line-through' : 'none'" (click)="completeTodo($index)">{{ item.name }}</div>
+        <button class="itemBtn" type="button" (click)="deleteTodo($index)">Delete</button>
+    </div>
+}
