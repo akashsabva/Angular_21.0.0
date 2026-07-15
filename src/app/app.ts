@@ -1,4 +1,4 @@
-import { Component, effect, model, signal } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Counter } from './counter/counter';
@@ -6,14 +6,17 @@ import { ShortNamePipe } from './pipe/short-name-pipe';
 import { ConvertCurrencyPipe } from './pipe/convert-currency-pipe';
 import { CommonModule } from '@angular/common';
 import { Todo } from './todo/todo';
+import { Child } from './child/child';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo],
+  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
+
+  parentTochild: string = 'Message of Parent to Child';
 
   fullName: string = "John Doe";
   totalAmount: number = 20;
