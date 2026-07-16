@@ -1,3 +1,11 @@
+<div [style.display]="'flex'">
+    <app-card [title]="'HTML Card'" [description]="'This is HTML card'">
+        <p>This is Inside content of card</p>
+        <button>More</button>
+    </app-card>
+    <app-card [title]="'CSS Card'" [description]="'This is CSS card'"></app-card>
+</div>
+
 <app-forms></app-forms>
 
 <app-child [message]="parentTochild" #child></app-child>

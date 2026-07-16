@@ -8,10 +8,11 @@ import { CommonModule } from '@angular/common';
 import { Todo } from './todo/todo';
 import { Child } from './child/child';
 import { Forms } from './forms/forms';
+import { Card } from './card/card';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child, Forms],
+  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child, Forms, Card],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
