@@ -1,64 +1,14 @@
 import { Component, effect, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Login } from './login/login';
-import { Counter } from './counter/counter';
-import { ShortNamePipe } from './pipe/short-name-pipe';
-import { ConvertCurrencyPipe } from './pipe/convert-currency-pipe';
-import { CommonModule } from '@angular/common';
-import { Todo } from './todo/todo';
-import { Child } from './child/child';
-import { Forms } from './forms/forms';
-import { Card } from './card/card';
-import { Button } from './button/button';
-import { Input } from './input/input';
+import { Dashboard } from './dashboard/dashboard';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child, Forms, Card, Button, Input],
+  imports: [RouterOutlet, Dashboard],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-
-  email = "";
-  onEmailChange(value: string) {
-    this.email = value;
-  }
-
-  msg = '';
-  saveData(message: string) {
-    console.log(message);
-    this.msg = message;
-  }
-
-  parentTochild: string = 'Message of Parent to Child';
-
-  fullName: string = "John Doe";
-  totalAmount: number = 20;
-  usdToInrRate: number = 90;
-
-  isDarkMode = signal<boolean>(false);
-
-  constructor() {
-    effect(() => {
-      if(this.isDarkMode()) {
-        document.body.style.backgroundColor = 'black';
-        document.body.style.color = 'white';
-      } else {
-        document.body.style.backgroundColor = 'white';
-        document.body.style.color = 'black';
-      }
-    })
-  }
-
-  handleMode() {
-    this.isDarkMode.update(mode => !mode);
-  }
-
   protected readonly title = signal('angular-tutorial');
-  name = "Sky";
-  getUser() {
-    return "Return from Function";
-  }
-  summary = signal("This is Summary Signal");
+  
 }
