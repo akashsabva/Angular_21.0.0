@@ -9,14 +9,21 @@ import { Todo } from './todo/todo';
 import { Child } from './child/child';
 import { Forms } from './forms/forms';
 import { Card } from './card/card';
+import { Button } from './button/button';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child, Forms, Card],
+  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child, Forms, Card, Button],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
+
+  msg = '';
+  saveData(message: string) {
+    console.log(message);
+    this.msg = message;
+  }
 
   parentTochild: string = 'Message of Parent to Child';
 
