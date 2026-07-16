@@ -1,3 +1,6 @@
+<app-input [label]="'Email'" [type]="'email'" (valueChange)="onEmailChange($event)"></app-input> <br />
+<p>Email: {{ email }}</p>
+
 <app-button [label]="'Continue'" (clicked)="saveData($event)"></app-button>
 
 <div [style.display]="'flex'">

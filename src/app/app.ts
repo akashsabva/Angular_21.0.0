@@ -10,14 +10,20 @@ import { Child } from './child/child';
 import { Forms } from './forms/forms';
 import { Card } from './card/card';
 import { Button } from './button/button';
+import { Input } from './input/input';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child, Forms, Card, Button],
+  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child, Forms, Card, Button, Input],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
+
+  email = "";
+  onEmailChange(value: string) {
+    this.email = value;
+  }
 
   msg = '';
   saveData(message: string) {
