@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Login } from '../login/login';
 import { Counter } from '../counter/counter';
@@ -6,14 +6,13 @@ import { ShortNamePipe } from '../pipe/short-name-pipe';
 import { ConvertCurrencyPipe } from '../pipe/convert-currency-pipe';
 import { Todo } from '../todo/todo';
 import { Child } from '../child/child';
-import { Forms } from '../forms/forms';
 import { Card } from '../card/card';
 import { Button } from '../button/button';
 import { Input } from '../input/input';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child, Forms, Card, Button, Input],
+  imports: [Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child, Card, Button, Input],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
@@ -34,24 +33,6 @@ export class Dashboard {
   fullName: string = "John Doe";
   totalAmount: number = 20;
   usdToInrRate: number = 90;
-
-  isDarkMode = signal<boolean>(false);
-
-  constructor() {
-    effect(() => {
-      if(this.isDarkMode()) {
-        document.body.style.backgroundColor = 'black';
-        document.body.style.color = 'white';
-      } else {
-        document.body.style.backgroundColor = 'white';
-        document.body.style.color = 'black';
-      }
-    })
-  }
-
-  handleMode() {
-    this.isDarkMode.update(mode => !mode);
-  }
 
   protected readonly title = signal('angular-tutorial');
   name = "Sky";

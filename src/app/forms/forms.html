@@ -1,19 +1,10 @@
-<h1>Reactive Form using Signal</h1>
+<h1>Forms</h1>
 
-<form [formGroup]="formRF" (ngSubmit)="submitFormRF()">
-    <input formControlName="nameRF" placeholder="Enter Name">
-    <input formControlName="emailRF" placeholder="Enter Email">
-    <button type="submit">Submit</button>
-</form>
-<p>Name: {{ formRF.get('nameRF')?.value }}</p>
-<p>Email: {{ formRF.get('emailRF')?.value }}</p>
+<nav>
+    <a routerLink="template">Template Driven Form</a>
+    <a routerLink="reactive">Reactive Form</a>
+</nav>
 
 <hr>
 
-<h1>Template Driven Form using Signal</h1>
-
-<form (ngSubmit)="submitForm()">
-    <input placeholder="Enter Name" [ngModel]="name()" (ngModelChange)="name.set($event)" name="name">
-    <input placeholder="Enter Email" [ngModel]="email()" (ngModelChange)="email.set($event)" name="email">
-    <button type="submit">Submit</button>
-</form>
+<router-outlet />
