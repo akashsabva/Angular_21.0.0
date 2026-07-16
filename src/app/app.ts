@@ -7,10 +7,11 @@ import { ConvertCurrencyPipe } from './pipe/convert-currency-pipe';
 import { CommonModule } from '@angular/common';
 import { Todo } from './todo/todo';
 import { Child } from './child/child';
+import { Forms } from './forms/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child],
+  imports: [RouterOutlet, Login, Counter, ShortNamePipe, ConvertCurrencyPipe, CommonModule, Todo, Child, Forms],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
