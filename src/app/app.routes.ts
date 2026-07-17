@@ -9,6 +9,9 @@ import { ReactiveForm } from './forms/reactive-form/reactive-form';
 import { PageNotFound } from './page-not-found/page-not-found';
 import { Products } from './products/products';
 import { SignalForm } from './forms/signal-form/signal-form';
+import { Api } from './api/api';
+import { Subscribe } from './api/subscribe/subscribe';
+import { SignalApi } from './api/signal-api/signal-api';
 
 export const routes: Routes = [
     { path: '', component: Dashboard },
@@ -25,6 +28,14 @@ export const routes: Routes = [
         ] 
     },
     { path: 'products', component: Products },
+    { 
+        path: 'api', 
+        component: Api,
+        children: [
+            {path: 'subscribeapi', component: Subscribe},
+            {path: 'signalapi', component: SignalApi}
+        ]
+    },
     { path: '**', component: PageNotFound }
 
 ];
