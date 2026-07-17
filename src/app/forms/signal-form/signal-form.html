@@ -1,0 +1,10 @@
+<h1>Signal Form</h1>
+
+<form (submit)="submitForm(); $event.preventDefault()">
+    <input [formField]="loginForm.name" placeholder="Enter Name">
+    <input [formField]="loginForm.email" placeholder="Enter Email">
+    <button type="submit">Submit</button>
+</form>
+
+<p>Name: {{ userSignal().name }}</p>
+<p>Email: {{ userSignal().email }}</p>

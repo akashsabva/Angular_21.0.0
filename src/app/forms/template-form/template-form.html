@@ -5,3 +5,6 @@
     <input placeholder="Enter Email" [ngModel]="email()" (ngModelChange)="email.set($event)" name="email">
     <button type="submit">Submit</button>
 </form>
+
+<p>Name: {{ name() }}</p>
+<p>Email: {{ email() }}</p>
