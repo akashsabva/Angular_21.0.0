@@ -7,6 +7,7 @@ import { LightDarkMode } from './light-dark-mode/light-dark-mode';
 import { TemplateForm } from './forms/template-form/template-form';
 import { ReactiveForm } from './forms/reactive-form/reactive-form';
 import { PageNotFound } from './page-not-found/page-not-found';
+import { Products } from './products/products';
 
 export const routes: Routes = [
     { path: '', component: Dashboard },
@@ -21,6 +22,7 @@ export const routes: Routes = [
             {path: 'reactive', component: ReactiveForm}
         ] 
     },
+    { path: 'products', component: Products },
     { path: '**', component: PageNotFound }
 
 ];

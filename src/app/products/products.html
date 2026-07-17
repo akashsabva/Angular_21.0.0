@@ -1,0 +1,9 @@
+<h1>Products(Signal with Search Using Queryparams)</h1>
+
+<input type="text" [value]="search()" (input)="search.set($event.target.value);updateUrl();" />
+
+<ul>
+    @for (item of filteredProducts(); track $index) {
+        <li>{{ item }}</li>
+    }
+</ul>
