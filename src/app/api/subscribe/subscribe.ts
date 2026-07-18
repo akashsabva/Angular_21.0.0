@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { User } from '../../service/user';
+import { UserService } from '../../service/user-service';
 
 @Component({
   selector: 'app-subscribe',
@@ -11,7 +11,7 @@ export class Subscribe {
 
   users: any[] = [];
 
-  constructor(private userService: User) {}
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
     this.userService.getUsers().subscribe((data: any) => {

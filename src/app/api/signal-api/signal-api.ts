@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { User } from '../../service/user';
+import { UserService } from '../../service/user-service';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-signal-api',
@@ -9,7 +10,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
   styleUrl: './signal-api.css',
 })
 export class SignalApi {
-  userService = inject(User);
+  userService = inject(UserService);
 
-  users: any = toSignal(this.userService.getUsers());
+  users: any = toSignal<User[]>(this.userService.getUsers());
 }
