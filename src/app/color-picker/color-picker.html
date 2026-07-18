@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Color Picker App</h1>
+
+    <input type="color" [value]="selectedColor()" (input)="selectedColor.set($event.target.value)">
+
+    <div class="preview-box" [style.backgroundColor]="selectedColor()">Preview</div>
+
+    <p class="hex-code">
+        HEX code: <b>{{ selectedColor() }}</b>
+    </p>
+
+    <button (click)="copyColor()">Copy Color</button>
+</div>

@@ -12,6 +12,7 @@ import { SignalForm } from './forms/signal-form/signal-form';
 import { Api } from './api/api';
 import { Subscribe } from './api/subscribe/subscribe';
 import { SignalApi } from './api/signal-api/signal-api';
+import { ColorPicker } from './color-picker/color-picker';
 
 export const routes: Routes = [
     { path: '', component: Dashboard },
@@ -36,6 +37,7 @@ export const routes: Routes = [
             {path: 'signalapi', component: SignalApi}
         ]
     },
+    { path: 'color', component: ColorPicker },
     { path: '**', component: PageNotFound }
 
 ];
