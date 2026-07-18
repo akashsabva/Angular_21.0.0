@@ -1,9 +1,20 @@
 <h1>API call using subscibe</h1>
 
+<form (submit)="submitForm();$event.preventDefault();">
+    <input placeholder="Enter Name" [value]="name()" (input)="name.set($event.target.value)" name="name">
+    <input placeholder="Enter Email" [value]="email()" (input)="email.set($event.target.value)" name="email">
+    <button type="submit">{{ updateUserId() === null ? 'Submit' : 'Update' }}</button>
+</form>
+
+<hr />
+
+<h3>User List</h3>
 <ul>
-    @for (user of users; track user.id) {
-        <li>{{ user.name }} - ({{ user.email }})</li>
+    @for (user of users(); track user.id) {
+        <li>
+            {{ user.name }} - ({{ user.email }})
+            <button (click)="editUser(user)">Edit</button>
+            <button (click)="deleteUser(user)">Delete</button>
+        </li>
     }
 </ul>
-
-<p>Total Users: {{ users.length }}</p>

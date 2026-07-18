@@ -1,5 +1,5 @@
 export interface User {
-    id: number;
+    id?: number;    //Auto generate ID
     name: string;
     email: string;
 }

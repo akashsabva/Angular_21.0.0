@@ -1,21 +1,62 @@
 {
-  "$schema": "./node_modules/json-server/schema.json",
   "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
   ],
   "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
   ],
   "profile": {
     "name": "typicode"
   },
   "users": [
-    { "id": "1", "name": "Alice", "email": "alice@gmail.com" },
-    { "id": "2", "name": "Bob", "email": "bob@gmail.com" },
-    { "id": "3", "name": "cat", "email": "cat@gmail.com" },
-    { "id": "1", "name": "dog", "email": "dog@gmail.com" },
-    { "id": "4", "name": "elephant", "email": "elephant@gmail.com" }
-  ]
+    {
+      "id": "1",
+      "name": "Alice",
+      "email": "alice@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "email": "bob@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "cat",
+      "email": "cat@gmail.com"
+    },
+    {
+      "id": "4",
+      "name": "dog",
+      "email": "dog@gmail.com"
+    },
+    {
+      "id": "5",
+      "name": "elephant",
+      "email": "elephant@gmail.com"
+    },
+    {
+      "name": "kml",
+      "email": "kml@gmail.com",
+      "id": "BzB5e3im4to"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
