@@ -13,6 +13,7 @@ import { Api } from './api/api';
 import { Subscribe } from './api/subscribe/subscribe';
 import { SignalApi } from './api/signal-api/signal-api';
 import { ColorPicker } from './color-picker/color-picker';
+import { Review } from './review/review';
 
 export const routes: Routes = [
     { path: '', component: Dashboard },
@@ -38,6 +39,7 @@ export const routes: Routes = [
         ]
     },
     { path: 'color', component: ColorPicker },
+    { path: 'review', component: Review },
     { path: '**', component: PageNotFound }
 
 ];

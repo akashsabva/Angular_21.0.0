@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Our Reviews</h2>
+    <div class="box">
+        @if (reviewData(); as review) {
+            <img [src]="review.image" [alt]="review.name">
+            <h3>{{ review.name }}</h3>
+            <h5>{{ review.job }}</h5>
+            <p>"{{ review.text }}"</p>
+        
+            <div class="buttons">
+                <button (click)="previousClick()">Prev</button>
+                <button (click)="nextClick()">Next</button>
+            </div>
+            <button class="randomBtn" (click)="randomClick()">Random</button>
+        } @else {
+            <p>Loading...</p>
+        }
+    </div>
+</div>

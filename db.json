@@ -53,9 +53,46 @@
       "email": "elephant@gmail.com"
     },
     {
-      "name": "kml",
-      "email": "kml@gmail.com",
+      "name": "kml2",
+      "email": "kml2@gmail.com",
       "id": "BzB5e3im4to"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Sky way",
+      "job": "Frontend Developer",
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "text": "I am Frontend Developer. I am Frontend Developer."
+    },
+    {
+      "id": 2,
+      "name": "Micheal Jackson",
+      "job": "Angular Developer",
+      "image": "https://randomuser.me/api/portraits/women/44.jpg",
+      "text": "I am Angular Developer. I am Angular Developer."
+    },
+    {
+      "id": 3,
+      "name": "Pery Pery",
+      "job": "Design Developer",
+      "image": "https://randomuser.me/api/portraits/women/32.jpg",
+      "text": "I am Design Developer. I am Design Developer."
+    },
+    {
+      "id": 4,
+      "name": "Amanda Cristian",
+      "job": "QA Developer",
+      "image": "https://randomuser.me/api/portraits/men/23.jpg",
+      "text": "I am Quality Assurance Developer. I am Quality Assurance Developer."
+    },
+    {
+      "id": 5,
+      "name": "Stuart Broad",
+      "job": "Business Analyst",
+      "image": "https://randomuser.me/api/portraits/women/30.jpg",
+      "text": "I am Business Analyst. I am Business Analyst."
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
