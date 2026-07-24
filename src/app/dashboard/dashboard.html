@@ -2,6 +2,7 @@
 <p>Email: {{ email }}</p>
 
 <app-button [label]="'Continue'" (clicked)="saveData($event)"></app-button>
+<p>{{ msg }}</p>
 
 <div [style.display]="'flex'">
     <app-card [title]="'HTML Card'" [description]="'This is HTML card'">
@@ -13,6 +14,7 @@
 
 <app-child [message]="parentTochild" #child></app-child>
 <p>{{ child.childToParent() }}</p>
+<!-- <p>{{ child.callFromParent() }}</p> -->
 
 <app-todo></app-todo>
 
@@ -28,4 +30,4 @@
 <h4>{{ getUser() }}</h4>
 <h5>{{ summary() }}</h5>
 
-<app-login></app-login>
+<app-other></app-other>

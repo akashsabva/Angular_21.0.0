@@ -23,5 +23,6 @@ export class LightDarkMode {
 
   handleMode() {
     this.isDarkMode.update(mode => !mode);
+    // this.isDarkMode.set(!this.isDarkMode());
   }
 }

@@ -15,4 +15,8 @@ export class Child {
     this.childToParent.set('Update Message of Child to Parent');
   }
 
+  callFromParent() {
+    console.log("CALLED");
+  }
+
 }

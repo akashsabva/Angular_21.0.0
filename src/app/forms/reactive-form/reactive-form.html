@@ -7,3 +7,38 @@
 </form>
 <p>Name: {{ formRF.get('nameRF')?.value }}</p>
 <p>Email: {{ formRF.get('emailRF')?.value }}</p>
+
+<hr />
+<h3>With Validation</h3>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input type="text" placeholder="Name" formControlName="name" autocomplete="name">
+  @if(form.controls.name.touched && form.controls.name.hasError('required')){
+    <small>Name is required</small>
+  }
+  @if(form.controls.name.hasError('minlength')){
+    <small>Minimum 3 characters</small>
+  }
+
+  <input type="email" placeholder="Email" formControlName="email" autocomplete="email">
+  @if(form.controls.email.touched && form.controls.email.hasError('email')){
+    <small>Invalid Email</small>
+  }
+
+  <input type="password" placeholder="Password" formControlName="password" autocomplete="new-password">
+  @if(form.controls.password.hasError('minlength')){
+    <small>Minimum 6 characters</small>
+  }    
+
+  <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" autocomplete="new-password">
+  @if(form.hasError('passwordMismatch')){
+    <small>Password does not match</small>
+  }
+
+  <button [disabled]="form.invalid">Register</button>
+
+  <h3>
+    <a routerLink="/">Go to Home</a>
+  </h3>
+
+</form>
